@@ -1,0 +1,274 @@
+div.login{
+	background: linear-gradient(90deg, rgba(8,168,245,1) 0%, rgba(246,247,247,1) 51%, rgba(0,212,255,1) 100%);
+	padding: 10px 20px;
+	margin: 0;
+	text-align: right;
+}
+
+input[type="submit"]{
+	padding: 1px 10px;
+	font-weight: bold;
+	border-radius: 5px;
+	outline: none;
+	margin: 5px;
+}
+
+input[class="identificar"]{
+	padding: 3px 10px 1px;
+	outline: none;
+	border:none;
+	border-bottom: solid 1px black;
+	border-radius: 4px;
+}
+
+input[class="identificar"]:focus{
+	border-bottom: solid 4px grey;	
+}
+
+label.log{
+	margin-left: 10px;
+}
+
+label#bienvenida{
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+input[type="submit"]:hover{
+	color: white;	
+	background-color: black;
+}
+
+/* ************* Menu Principla *************** */
+
+nav#menuPrincipal{
+	background-color: #00070c;	
+	display: inline-flex;
+	flex-wrap: wrap;	
+	width: 100%;
+	padding: 10px 20px;
+}
+
+div.inicio{
+	max-width: 400px;
+	width: 100%;
+	margin-bottom: 5px;	
+}
+
+div.menu{
+	max-width: 800px;
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: flex-end;		
+}
+
+div.botmenu{
+	max-width: 160px;	
+	width: 100%;
+	margin: 2px 15px;
+	text-align: center;
+	display: inline-block;
+}
+
+div.botmenu a{
+	color: #7c7e82;
+	text-decoration-line: none;
+}
+
+div.botmenu a:hover{
+	color: black;
+	font-weight: bold;
+}
+
+div.inicio a{
+	color: #d0d6e2;
+	text-decoration-line: none;
+}
+
+div.inicio a:hover{
+	color: white;
+	font-size: 1.8rem;
+
+}
+
+div.botmenu ul.lis{
+	display: none;
+}
+
+div.botmenu ul.listas{
+	max-width: 160px;
+	width: 100%;	
+	position: absolute;	
+	background-color: #efebeb;
+	padding: 3px;
+	margin: 0;
+	list-style-type: none;
+	border-left: solid 1px black;
+	border-right: solid 1px black;
+	border-bottom: solid 1px black;
+	border-radius: 0 0 10px 10px;
+}
+
+div.botmenu ul li{
+	padding: 5px 3px 1px;
+	border-bottom: solid 1px gray;
+}
+
+div.inicio h2{
+	padding: 0;
+	margin: 0;
+}
+
+div.botmenu h4{
+	min-width: 160px;
+	padding: 2px 5px;
+	margin: 0;	
+	background-color: #504c4c;
+	border-radius: 7px;
+	color: #efebeb;
+}
+
+div.botmenu h4:hover{
+	cursor: pointer;
+	color:black;
+	background-color: #efebeb;	
+}
+
+div.botmenu h4.on{
+	cursor: pointer;
+	color:black;
+	background-color: #efebeb;
+	border-radius: 7px 7px 3px 3px;
+}
+
+/* ****************** footer **************** */
+
+footer{
+	background-color: black;
+	color: white;
+	padding: 10px 15px;
+}
+
+footer>p{
+	cursor: pointer;
+}
+
+footer form#formContacto{
+	background-color: rgba(255, 255, 255, .08);
+	padding: 10px 15px;
+	max-width: 500px;
+	width: 100%;
+	border:solid 1px grey;
+	border-radius: 10px;	
+}
+
+footer form.oculto{
+	display: none;
+}
+
+footer ul.EntradasContacto{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+		
+}
+ul.EntradasContacto li.empresaTel{
+	display: inline-block;
+	width: 40%;	
+}
+
+ul.EntradasContacto li label.labEntradas{
+	display:block;
+	color: grey;
+	visibility: hidden;	
+}
+
+ul.EntradasContacto li label#condiciones a{
+	color: white;
+}
+
+ul.EntradasContacto li input[class="infoEntradas"],
+ul.EntradasContacto li textarea.infoEntradas{
+	background-color: #a5a7a500;
+	border:none;
+	border-bottom: solid 1px yellow;
+	color: white;
+	width: 80%;
+}
+
+ul.EntradasContacto li input[class="infoEntradas Error"],
+ul.EntradasContacto li textarea.Error{	
+	background-color: #a5a7a500;
+	border:none;
+	border-bottom: solid 1px red;
+	color: white;
+	width: 80%;
+}
+
+
+
+ul.EntradasContacto li textarea#mensaje{
+	height: 90px;
+}
+
+ul.EntradasContacto li input[class="infoEntradas"]:focus,
+ul.EntradasContacto li textarea#mensaje:focus{
+	outline: none;
+	border-bottom: solid 2px orange;
+	width: 100%;		
+	animation-name: colorLinea;
+	animation-duration: .7s;
+
+}
+
+ul.EntradasContacto li input[class="infoEntradas Error"]:focus{
+	outline: none;
+	border-bottom: solid 2px orange;
+	width: 100%;		
+	animation-name: colorLinea;
+	animation-duration: .7s;
+}
+
+ul.EntradasContacto li textarea#mensaje:focus{
+	height: 160px;
+}
+
+ul.EntradasContacto li{
+	margin-top: 10px;
+}
+
+p.ErrorEnvio{
+	color: red;
+	text-decoration-line: underline;
+	animation-name: colores;
+	animation-duration: .5s;
+}
+
+span.enEspera{
+	font-size: 35px;
+	animation-name: colores;
+	animation-duration: 1.1s;
+	animation-iteration-count: infinite;
+}
+
+p.envioCorrecto{
+	animation-name: colores;
+	animation-duration: 2.5s;	
+}
+
+ul.EntradasContacto li.contBoton{
+	text-align: right;	
+}
+
+@keyframes colorLinea{
+	from{border-bottom: solid 1px red; width: 70%;}
+	to{border-bottom: solid 2px orange; width: 100%;}
+}
+
+@keyframes colores{
+	from{color: black;}
+	to{color: white;}
+}

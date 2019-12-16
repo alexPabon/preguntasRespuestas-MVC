@@ -1,0 +1,40 @@
+div.contModulos{
+	border:solid 1px black;
+	padding-left: 4px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	background-color:#e1e9f1;
+}
+
+div.contModulos:hover{
+	background-color: #fafdff;
+}
+
+div.contSinAccion{
+	border:solid 1px red;
+	padding-left: 4px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+h3.acciones{
+	color:#b76b0a;
+}
+
+p.modulos{
+	padding: 0 20px;	
+}
+
+a.enlaceModulo{
+	text-decoration-line: none;
+	color: black;
+}
+
+a.enlaceModulo:hover{
+	color: #0404bf;
+	font-weight: bold;
+}
+
+div.detalles{
+	background-color: #efe0c5;
+}
