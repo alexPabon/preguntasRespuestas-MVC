@@ -36,7 +36,7 @@ class Login{
 		session_unset();	//vacia el array de sesion
 
 		header("Refresh:0.7; url=/");
-		die('<h2>Redirigiendo a la portada....<h2>');
+		die("<h2 style='text-align: center; margin-top: 30vh; font-size:3.5vw;'>Redirigiendo a la portada....</h2>");
 	}	
 
 	//Metodo que gestiona las operaciones de login-logout a partir

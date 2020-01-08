@@ -68,8 +68,8 @@ class Module{
     	//muestra el formulario de un modulo
     public function create(){
         	//solo los administradores pueden listar usuarios
-        if(!Login::isAdmin())
-            throw new Exception("Debes ser administrador");
+        // if(!Login::isAdmin())
+        //     throw new Exception("Debes ser administrador");
         
         	//cagar los usuarios
         $usuario=Login::getUsuario();
@@ -112,8 +112,8 @@ class Module{
 	    //1ºmuestra el formulario de edicion de un modulo
     public function edit($id=false){    		    		
     		//solo los administradores pueden crear Modulos
-        if(!Login::isAdmin())
-            throw new Exception("Debes ser administrador");
+        // if(!Login::isAdmin())
+        //     throw new Exception("Debes ser administrador");
         	//comprobar que me llega un identificador
         if(!$id)
             throw new Exception("No se indico el modulo");
@@ -160,8 +160,8 @@ class Module{
     	//1ºmuestra el formulario de confirmacion de eliminacion
     public function delete($id){    	    		
     		//solo los administradores pueden crear Modulos
-        if(!Login::isAdmin())
-            throw new Exception("Debes ser administrador");
+        // if(!Login::isAdmin())
+        //     throw new Exception("Debes ser administrador");
 
         	//comprobar que llega el identificador
         if(!$id)

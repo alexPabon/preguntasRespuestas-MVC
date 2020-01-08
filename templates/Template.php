@@ -2,15 +2,18 @@
 class Template{
 
 	public static function login($usuario=NULL){ ?>
-		<div class="login"> <?php			
+		<div class="login"><?php			
 			if(!$usuario){?>
 				<form method="post">
-					<label class="log">User:</label>
-					<input id="user" class="identificar" type="text" name="user">
-					<label class="log">Password:</label>
-					<input class="identificar" type="password" name="password">
-
-					<input type="submit" name="login" value="Login">
+					<div>
+    					<label class="log">Usuario:</label>
+    					<input id="user" class="identificar" type="text" name="user">
+					</div>
+					<div>
+    					<label class="log">Contraseña:</label>
+    					<input class="identificar" type="password" name="password">
+					</div>
+					<input type="submit" name="login" value="Iniciar sesion">
 				</form>
 				<form method="post" action="/user/regi">
 					<input type="submit" name="registrar" value="Registrarse">
@@ -21,21 +24,22 @@ class Template{
 					<input type="submit" name="logout" value="logout">
 				</form>
 			<?php } ?>
-		</div>
+		</div>		
 	<?php }
 
 	public static function menu(){ ?>
 		<nav id="menuPrincipal">
 			<div class="inicio">
-				<h2><a href="/">Inicio</a></h2>				
+				<h2><a href="/">Inicio</a></h2>
+				<span class="btnBurger"><hr><hr><hr></span>				
 			</div>
-			<div class="menu">
+			<div class="menu">				
 				<div class="botmenu">
-					<h4>Acciones Formativas</h4>
+					<h4>Acc Formativas</h4>
 					<ul class="lis">
 						<li><a href="/action">Ver Acciones</a></li>
 						<?php
-							if(Login::isAdmin())
+							if(Login::isAdmin()||Login::privilegio(500))
 								echo "<li><a href='/action/create'>Crear una Acciones</a></li>";
 						?>
 					</ul>
@@ -45,7 +49,7 @@ class Template{
 					<ul class="lis">
 						<li><a href="/module">Ver Modulos</a></li>
 						<?php
-							if(Login::isAdmin())
+							if(Login::isAdmin()||Login::privilegio(500))
 								echo "<li><a href='/module/create'>Crear un Modulo</a></li>";
 						?>
 					</ul>
@@ -56,7 +60,7 @@ class Template{
 						<?php
 						if(Login::privilegio(0)){
 							echo "<li><a href='/query'>Ver Preguntas</a></li>";
-							if(Login::isAdmin())
+							if(Login::isAdmin()||Login::privilegio(500))
 								echo "<li><a href='/query/create'>Crear una Pregunta</a></li>";
 						}else
 							echo "<li><a href='#user'>Primero, debes iniciar session</a></li>";

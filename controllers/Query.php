@@ -48,9 +48,9 @@ class Query{
     
     	//muestra el formulario de un pregunta
     public function create(){
-        	//solo los administradores pueden listar usuarios
-        if(!Login::isAdmin())
-            throw new Exception("Debes ser administrador");
+        	//solo los administradores pueden listar preguntas
+        // if(!Login::isAdmin())
+        //     throw new Exception("Debes ser administrador");
         	//recupera la lista de modulos
         $modulos=Modulo::get();
 
@@ -62,6 +62,9 @@ class Query{
     
     	//Guarda el nuevo pregunta
     public function store(){
+        
+        if(!Login::isAdmin())
+            throw new Exception("Debes ser administrador");
         	//recibos el id del modulo
         $idModulo = intval($_POST['idModulo']);
         if($idModulo==0)

@@ -5,9 +5,18 @@ $(document).ready(function() {
 	
 	//se cambia el nombre de la clase para que no haga efectos raros al cargar la pagina
 	$('.lis').addClass('listas').removeClass('lis');
-
+	
+	var menu = $('.menu');
+	var flagMenu = true;
 	var botonesMenu = $('.botmenu h4');
 	var listaOpciones = $('.listas');
+	var botonBurger = $('.btnBurger');
+	
+	$(window).resize(function(){
+		if($('body').width()>761)
+			menu.removeAttr('style');		
+	});
+	
 	
 	// Cerramos todo el contenido al cargar la página
 	listaOpciones.hide();
@@ -34,7 +43,17 @@ $(document).ready(function() {
 
 	$('body').click(function() {
     	listaOpciones.slideUp();
-    	botonesMenu.removeClass('on');
+    	botonesMenu.removeClass('on');    	
+	});
+	
+	botonBurger.click(function(){
+		if(menu.is(':hidden')){
+			menu.slideDown();
+			flagMenu=false;
+		}else{
+			menu.slideUp();
+			flagMenu=true;
+		}
 	});
 
 	// ************************ FOOTER *******************************

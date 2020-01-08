@@ -13,10 +13,11 @@
 		<?php
 			Template::login($usuario);			
 			Template::menu();
-		?>
-		<h1 class="info">Exito!</h1>
-		<p class="mensaje"><?=$mensaje?></p>
-		<div class="contenido"></div>		
+		?>		
+		<div class="contenido">
+			<h1 class="info">Exito!</h1>
+			<p class="mensaje"><?=$mensaje?></p>
+		</div>		
 		<?PHP Template::footer($usuario);?>
 	</body>
 </html>

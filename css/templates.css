@@ -1,8 +1,8 @@
 div.login{
-	background: linear-gradient(90deg, rgba(8,168,245,1) 0%, rgba(246,247,247,1) 51%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 53%, rgb(5, 122, 183) 100%);
 	padding: 10px 20px;
 	margin: 0;
-	text-align: right;
+	text-align: right;	
 }
 
 input[type="submit"]{
@@ -38,6 +38,14 @@ label#bienvenida{
 input[type="submit"]:hover{
 	color: white;	
 	background-color: black;
+	cursor: pointer;
+}
+
+div.login:hover{	
+	animation-name: animarGradientes;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-iteration-count: 2;	
 }
 
 /* ************* Menu Principla *************** */
@@ -45,20 +53,22 @@ input[type="submit"]:hover{
 nav#menuPrincipal{
 	background-color: #00070c;	
 	display: inline-flex;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
+	justify-content: space-between;	
 	width: 100%;
 	padding: 10px 20px;
 }
 
 div.inicio{
-	max-width: 400px;
-	width: 100%;
-	margin-bottom: 5px;	
+	max-width: 400px;	
+	margin-bottom: 5px;
+	display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 div.menu{
-	max-width: 800px;
-	width: 100%;
+	max-width: 800px;	
 	display: inline-flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
@@ -68,9 +78,19 @@ div.menu{
 div.botmenu{
 	max-width: 160px;	
 	width: 100%;
-	margin: 2px 15px;
+	margin: 2px 7px;
 	text-align: center;
 	display: inline-block;
+}
+
+.btnBurger{
+	display:none;
+	width: 50px;
+    color: white;
+    border: solid 1px white;
+    border-radius: 3px;
+    padding: 0 4px;
+    cursor:pointer;   
 }
 
 div.botmenu a{
@@ -92,6 +112,10 @@ div.inicio a:hover{
 	color: white;
 	font-size: 1.8rem;
 
+}
+
+.btnBurger:hover{
+	border-color:yellow;	
 }
 
 div.botmenu ul.lis{
@@ -263,6 +287,7 @@ ul.EntradasContacto li.contBoton{
 	text-align: right;	
 }
 
+/* *********************** @keyframes **************************  */
 @keyframes colorLinea{
 	from{border-bottom: solid 1px red; width: 70%;}
 	to{border-bottom: solid 2px orange; width: 100%;}
@@ -271,4 +296,48 @@ ul.EntradasContacto li.contBoton{
 @keyframes colores{
 	from{color: black;}
 	to{color: white;}
+}
+
+@keyframes animarGradientes{
+	0%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 0%, rgb(5, 122, 183) 100%);}
+	5%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 5%, rgb(5, 122, 183) 100%);}
+	10%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 10%, rgb(5, 122, 183) 100%);}
+	15%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 15%, rgb(5, 122, 183) 100%);}
+	20%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 20%, rgb(5, 122, 183) 100%);}
+	25%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 25%, rgb(5, 122, 183) 100%);}
+	30%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 30%, rgb(5, 122, 183) 100%);}
+	35%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 35%, rgb(5, 122, 183) 100%);}
+	40%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 40%, rgb(5, 122, 183) 100%);}
+	450%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 45%, rgb(5, 122, 183) 100%);}
+	500%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 50%, rgb(5, 122, 183) 100%);}
+	55%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 55%, rgb(5, 122, 183) 100%);}
+	60%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 60%, rgb(5, 122, 183) 100%);}
+	65%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 65%, rgb(5, 122, 183) 100%);}
+	70%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 70%, rgb(5, 122, 183) 100%);}
+	75%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 75%, rgb(5, 122, 183) 100%);}
+	80%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 80%, rgb(5, 122, 183) 100%);}
+	85%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 85%, rgb(5, 122, 183) 100%);}
+	90%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 90%, rgb(5, 122, 183) 100%);}
+	95%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 95%, rgb(5, 122, 183) 100%);}
+	100%{background: linear-gradient(45deg, rgb(16, 66, 90) 0%, rgb(213, 237, 249) 100%, rgb(5, 122, 183) 100%);}
+	
+}
+
+/* *********************** @media Queries **************************  */
+
+@media screen and ( max-width:  760px ){
+	div.inicio{
+		width:100%;
+		padding:0 30px;
+	}
+	div.menu{		
+		display:none;
+	}
+	div.botmenu{
+		display:block;
+	}
+	
+	.btnBurger{
+		display:block;		
+	}
 }

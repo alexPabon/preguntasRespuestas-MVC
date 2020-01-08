@@ -44,8 +44,8 @@ class Action{
         //muestra el formulario de una accion
     public function create(){
             //solo los administradores pueden crear Acciones
-        if(!Login::isAdmin())
-            throw new Exception("Debes ser administrador");
+        // if(!Login::isAdmin())
+        //     throw new Exception("Debes ser administrador");
         
          //carga los usuarios
         $usuario=Login::getUsuario();
@@ -56,7 +56,7 @@ class Action{
     public function store(){
             //comprabar que llegan los datos por post
         if(empty($_POST['nombre']))
-            throw new Exception("Intentas Acceder sin formulario");
+            throw new Exception("Debes rellenar todos los campos");
             //solo los administradores pueden crear Acciones
         if(!Login::isAdmin())
             throw new Exception("Debes ser administrador");
@@ -85,8 +85,8 @@ class Action{
         // 1º muestra el formulario de edicion de una accion
     public function edit($id=false){
             //solo los administradores pueden editar las acciones
-        if(!Login::isAdmin())
-            throw new Exception("Debes ser administrador");
+        // if(!Login::isAdmin())
+        //     throw new Exception("Debes ser administrador");
         
             //comprobar que me llega un identificador
         if(!$id)
@@ -109,7 +109,7 @@ class Action{
     public function update(){
             //compruebo que llegan los datos por post
         if(empty($_POST['nombre']))
-            throw new Exception("Intentas acceder sin formulario");            
+            throw new Exception("Debes rellenar todos los campos");            
             //solo los administradores pueden actulizar acciones
         if(!Login::isAdmin())
             throw new Exception("Debes ser administrador");
@@ -136,8 +136,8 @@ class Action{
     // 1º muestra el formulario de confirmacion de eliminacion
     public function delete($id){
             //solo los administradores pueden actulizar acciones
-        if(!Login::isAdmin())
-            throw new Exception("Debes ser administrador");
+        // if(!Login::isAdmin())
+        //     throw new Exception("Debes ser administrador");
             //comprobar que llega el identificador
         if(!$id)
             throw new Exception("No se indico el accion");

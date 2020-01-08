@@ -75,11 +75,14 @@ class User{
         $u->apellido1=DB::escape($_POST['apellido1']);
         $u->apellido2=DB::escape($_POST['apellido2']);
         
+        if($u->user=="" || $u->password =="" || $u->nombre=="")
+            throw new Exception("Todos los campos son obligatorios");
+            
         if(Login::isAdmin()){
             $u->privilegio=intval($_POST['privilegio']);
-            $u->administrdor=empty($_POST['administrdor'])?0:1;
+            $u->administrador=empty($_POST['administrador'])?0:1;
         }
-
+        
         $u->email=DB::escape($_POST['email']);
         
         if(!$u->guardar())  //guardar en la BDD
@@ -226,6 +229,6 @@ class User{
         include 'view/exito.php';   //mostrar exito
 
         header("Refresh:5; url=/");
-        die('<p class="mensaje">Redirigiendo a la portada....</p>'); 
+        die("<h1 style='text-align: center; margin-top: 40px;'>Redirigiendo a la portada....</h1>"); 
    }
 }
