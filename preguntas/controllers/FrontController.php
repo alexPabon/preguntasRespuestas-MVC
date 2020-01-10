@@ -34,7 +34,7 @@ class FrontController{
 			$mensaje=$e->getMessage();		//recupera el mensaje de error
 
 			$usuario=Login::getUsuario();	//variable con info del usuario
-			include 'view/error.php'; 		//carga la vista de error
+			include '../../preguntas/view/error.php'; 		//carga la vista de error
 
 			header("refresh:6, url=/");
 		}
