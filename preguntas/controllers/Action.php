@@ -19,7 +19,7 @@ class Action{
         $usuario=Login::getUsuario();
         
             //cargar la vista del listado
-        include 'view/acciones/list.php';
+        include '../../preguntas/view/acciones/list.php';
     }
     
         //muestra una accion
@@ -38,7 +38,7 @@ class Action{
             //carga los usuarios
         $usuario=Login::getUsuario();
             //cargar la vista de detalles
-        include 'view/acciones/details.php';
+        include '../../preguntas/view/acciones/details.php';
     }
     
         //muestra el formulario de una accion
@@ -49,7 +49,7 @@ class Action{
         
          //carga los usuarios
         $usuario=Login::getUsuario();
-        include 'view/acciones/form_new.php';
+        include '../../preguntas/view/acciones/form_new.php';
     }
     
         //Guarda la nueva accion
@@ -76,7 +76,7 @@ class Action{
         $mensaje = "Guardado de la accion $accion->nombre correcto";
             //carga los usuarios
         $usuario=Login::getUsuario();
-        include 'view/exito.php';   //mostrar exito
+        include '../../preguntas/view/exito.php';   //mostrar exito
 
         header("refresh:7, url=/"); //redirecciona a la pagina principal despues de 7s
     }
@@ -102,7 +102,7 @@ class Action{
             //carga los usuarios
         $usuario=Login::getUsuario();
             //cargar la vista del formulario
-        include 'view/acciones/form_update.php';
+        include '../../preguntas/view/acciones/form_update.php';
     }
 
     //  2º aplica los cambio de un accion
@@ -152,7 +152,7 @@ class Action{
             //carga los usuarios
         $usuario=Login::getUsuario();
             //ir al formulario de confirmacion
-        include 'view/acciones/confirm_delete.php';
+        include '../../preguntas/view/acciones/confirm_delete.php';
     }
 
     //2º elimina el accion
@@ -174,7 +174,7 @@ class Action{
 
         //mostrar la vista de exito
         $mensaje="Borrado correcto!";
-        include 'view/exito.php';   //mostrar exito
+        include '../../preguntas/view/exito.php';   //mostrar exito
 
         header('refresh:7, url=/');
             

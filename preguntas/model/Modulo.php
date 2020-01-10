@@ -26,11 +26,10 @@ class Modulo{
     }
 
     public static function getModuloPreguntas(int $id=0):array{
-        $consulta ="SELECT m.id AS idModulo, p.id,p.enunciado, r.idPregunta,r.texto,r.correcta
+        $consulta ="SELECT m.id AS idModulo, p.id,p.enunciado
                     FROM modulos m
                         INNER JOIN preguntas_modulos pm ON m.id = pm.idModulo
-                        INNER JOIN preguntas p ON pm.idPregunta = p.id
-                        INNER JOIN respuestas r ON p.id = r.idPregunta
+                        INNER JOIN preguntas p ON pm.idPregunta = p.id                        
                     WHERE m.id = $id";
         return DB::selectAll($consulta,'Modulo');
     }

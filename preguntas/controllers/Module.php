@@ -22,7 +22,7 @@ class Module{
         $usuario=Login::getUsuario();
         
         	//cargar la vista del listado        
-        include 'view/modulo/list.php';
+        include '../../preguntas/view/modulo/list.php';
     }
     
     	//muestra un modulo
@@ -42,7 +42,7 @@ class Module{
             throw new Exception("No existe el modulo $id");
         
         	//cargar la vista de detalles
-        include 'view/modulo/details.php';
+        include '../../preguntas/view/modulo/details.php';
     }
 
         //muestra los modulos que corresponden a una accion formativa
@@ -62,7 +62,7 @@ class Module{
             throw new Exception("No hay modulos en esta accion formativa");
         
             //cargar la vista de detalles
-        include 'view/modulo/modulosAccion.php';
+        include '../../preguntas/view/modulo/modulosAccion.php';
     }
     
     	//muestra el formulario de un modulo
@@ -75,7 +75,7 @@ class Module{
         $usuario=Login::getUsuario();
         	//obtenemos las acciones
         $acciones=Accion::get();
-        include 'view/modulo/form_new.php';
+        include '../../preguntas/view/modulo/form_new.php';
     }
     
     	//Guarda el nuevo modulo
@@ -104,7 +104,7 @@ class Module{
         $usuario=Login::getUsuario();
         	//muestra la vista de exito
         $mensaje = "Guardado del modulo $modulo->nombre correcto";
-        include 'view/exito.php';   //mostrar exito
+        include '../../preguntas/view/exito.php';   //mostrar exito
         header("refresh:7, url=/");
     }
 
@@ -129,7 +129,7 @@ class Module{
             throw new Exception("No existe el modulo $id");
 
         	//cargar la vista del formulario
-        include 'view/modulo/form_update.php';
+        include '../../preguntas/view/modulo/form_update.php';
     }
 
     	//2ºaplica los cambio de un modulo
@@ -177,7 +177,7 @@ class Module{
             throw new Exception("No existe el modulo $id");
 
         	//ir al formulario de confirmacion
-        include 'view/modulo/confirm_delete.php';
+        include '../../preguntas/view/modulo/confirm_delete.php';
     }
 
     	//elimina el modulo
@@ -200,7 +200,7 @@ class Module{
         
         	//mostrar la vista de exito
         $mensaje="Borrado correcto!";
-        include 'view/exito.php';   //mostrar exito 
+        include '../../preguntas/view/exito.php';   //mostrar exito 
 
         header("refresh:7, url=/");
     }

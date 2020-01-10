@@ -23,7 +23,7 @@ class Query{
         $usuario=Login::getUsuario();
          
         	//cargar la vista del listado
-        require_once 'view/pregunta/list.php';
+        require_once '../../preguntas/view/pregunta/list.php';
     }
 
      public function resPreguntas($id=false){
@@ -35,13 +35,14 @@ class Query{
         
         $modulos = Modulo::getModulo($id);
         $preguntas=Modulo::getModuloPreguntas($id);
+        $respuestas=Respuesta::get();
         
         
             //cagar los usuarios
         $usuario=Login::getUsuario();
          
             //cargar la vista del listado
-        require_once 'view/pregunta/resPreguntas.php';         
+        require_once '../../preguntas/view/pregunta/resPreguntas.php';         
     }
     
     	//muestra un pregunta
@@ -61,7 +62,7 @@ class Query{
             throw new Exception("No existe el pregunta $id");
         
         	//cargar la vista de detalles
-        require_once 'view/pregunta/details.php';
+        require_once '../../preguntas/view/pregunta/details.php';
     }
     
     	//muestra el formulario de un pregunta
@@ -75,7 +76,7 @@ class Query{
             //cagar los usuarios
         $usuario=Login::getUsuario();
 
-        require_once 'view/pregunta/form_new.php';
+        require_once '../../preguntas/view/pregunta/form_new.php';
     }
     
     	//Guarda el nuevo pregunta
@@ -144,7 +145,7 @@ class Query{
         
         	//muestra la vista de exito
         $mensaje = "Guardado Correcto de la pregunta: <br>$pregunta->enunciado";
-        require_once 'view/exito.php';   //mostrar exito
+        require_once '../../preguntas/view/exito.php';   //mostrar exito
     }
 
 	//ACTUALIZAR SE HACE EN DOS PASOS
@@ -166,7 +167,7 @@ class Query{
             throw new Exception("No existe el pregunta $id");
 
         	//cargar la vista del formulario
-        require_once 'view/pregunta/form_update.php';
+        require_once '../../preguntas/view/pregunta/form_update.php';
     }
 
     	//aplica los cambio de un pregunta
@@ -240,7 +241,7 @@ class Query{
             throw new Exception("No existe la pregunta $id");
 
         	//ir al formulario de confirmacion
-        require_once 'view/pregunta/confirm_delete.php';
+        require_once '../../preguntas/view/pregunta/confirm_delete.php';
     }
 
     	//elimina el pregunta
@@ -256,6 +257,6 @@ class Query{
         
         	//mostrar la vista de exito
         $mensaje="Borrado correcto!";
-        require_once 'view/exito.php';   //mostrar exito            
+        require_once '../../preguntas/view/exito.php';   //mostrar exito            
     }
 }

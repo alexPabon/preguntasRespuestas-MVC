@@ -21,7 +21,7 @@ class User{
         $usuarios=Usuario::get();   //recuperar la lista de usuarios
         $usuario=Login::getUsuario();        
 
-        include 'view/usuario/list.php';
+        include '../../preguntas/view/usuario/list.php';
     }
     
     //muestra un usuario
@@ -47,7 +47,7 @@ class User{
         //recupera el usuario
         $usuario=Login::getUsuario();
         //cargar la vista de detalles
-        include 'view/usuario/details.php';
+        include '../../preguntas/view/usuario/details.php';
     }
 
     //muestra el formulario de nuevo usuario
@@ -58,7 +58,7 @@ class User{
         
         //recupera el usuario
         $usuario=Login::getUsuario();    
-        include 'view/usuario/form_new.php';
+        include '../../preguntas/view/usuario/form_new.php';
     }
 
     //Guarda el nuevo usuario
@@ -92,7 +92,7 @@ class User{
         $usuario=Login::getUsuario();
         //muestra la vista de exito
         $mensaje = "Guardado del Usuario $u->user correcto";
-        include 'view/exito.php';   //mostrar exito
+        include '../../preguntas/view/exito.php';   //mostrar exito
         header("Refresh:8; url=/");
     }
 
@@ -113,7 +113,7 @@ class User{
         $u=Usuario::getUsuario($id);
         
         //cargar la vista del formulario
-        include 'view/usuario/form_update.php';        
+        include '../../preguntas/view/usuario/form_update.php';        
     }
 
     //aplica los cambios de un usuario
@@ -175,7 +175,7 @@ class User{
         if(!$u) throw new Exception("No existe el usuario $id");
        
         //ir al formulario de confirmacion
-        include 'view/usuario/confirm_delete.php';
+        include '../../preguntas/view/usuario/confirm_delete.php';
         header("Refresh:15; url=/");      
     }
 
@@ -199,7 +199,7 @@ class User{
         
         //mostrar la vista de exito
         $mensaje="Borrado correcto!";
-        include 'view/exito.php';
+        include '../../preguntas/view/exito.php';
         header("Refresh:8; url=/");           
     }
 
@@ -208,7 +208,7 @@ class User{
         $usuario=Login::getUsuario(); 
         if($usuario)
             header('location:/'); 
-        include 'view/usuario/registrar.php';
+        include '../../preguntas/view/usuario/registrar.php';
     }
 
     public function registrar(){
@@ -226,7 +226,7 @@ class User{
             throw new Exception("No se pudo guardar $u->user");
 
         $mensaje = "Guardado del Usuario $u->user correcto <br>Ya puedes ingresar con tu Usuario y contraseña";
-        include 'view/exito.php';   //mostrar exito
+        include '../../preguntas/view/exito.php';   //mostrar exito
 
         header("Refresh:5; url=/");
         die("<h1 style='text-align: center; margin-top: 40px;'>Redirigiendo a la portada....</h1>"); 

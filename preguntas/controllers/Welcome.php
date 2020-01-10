@@ -7,6 +7,6 @@ class Welcome{
 		$usuario=Login::getUsuario();
 
 		//carga la vista de portada;
-		include 'view/portada.php';
+		include '../../preguntas/view/portada.php';
 	}
 }

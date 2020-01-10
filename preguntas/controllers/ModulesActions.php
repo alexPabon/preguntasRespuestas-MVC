@@ -19,7 +19,7 @@ class ModulesActions{
 		$modulos = Modulo::get();
 			//cagar los usuarios
         $usuario=Login::getUsuario();
-    	include 'view/modulAcc/addRelation.php';
+    	include '../../preguntas/preguntas/view/modulAcc/addRelation.php';
 
     }
 
@@ -46,7 +46,7 @@ class ModulesActions{
         $usuario=Login::getUsuario();
 			//mostrar la vista de exito
         $mensaje="Vinculado correctamente el modulo en la accion formativa!";
-        include 'view/exito.php';   //mostrar exito 
+        include '../../preguntas/view/exito.php';   //mostrar exito 
 
         header("refresh:1.2, url=/module/showModuls/".$idAccion);
 	}
@@ -82,7 +82,7 @@ class ModulesActions{
         $usuario=Login::getUsuario();
 			//mostrar la vista de exito
         $mensaje="Se quito correctamente el modulo de la accion formativa!";
-        include 'view/exito.php';   //mostrar exito 
+        include '../../preguntas/view/exito.php';   //mostrar exito 
 
         header("refresh:1.2, url=/module/showModuls/".$idAccion);
 	}

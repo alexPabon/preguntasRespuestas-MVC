@@ -25,7 +25,7 @@
           $listaPreguntas.="<ol type='a'>";
           $contResp=0;
 
-            foreach ($preguntas as $resp){
+            foreach ($respuestas as $resp){
               $numeroResp="r".$contResp;
               if($idPregta== $resp->idPregunta){
                 $listaPreguntas.="<li id='".$numeroResp.$numeroPregunta."' class='respuestas'>";
@@ -35,7 +35,7 @@
                     if(Login::isAdmin())
                       $listaPreguntas.="  <b>---CORRECTA!</b>";
 
-                    array_push($respuestaCorrecta, ["modul_".$resp->idModulo, $numeroPregunta, $numeroResp]);
+                    array_push($respuestaCorrecta, ["modul_".$modulos->id, $numeroPregunta, $numeroResp]);
                   }
                 $listaPreguntas.="</li>";
                 $contResp++;
