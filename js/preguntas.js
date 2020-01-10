@@ -2,7 +2,13 @@ window.onload= function(){
 		//Despues de cargar la pagina, obtenemos los formulario de las preguntas
 		//de cada modulo
 	var formPreguntas = document.getElementsByClassName("formModulos");
-	
+	var borrarRespuestas = document.getElementById('borrar');
+
+	if(typeof(borrarRespuestas) != 'undefined' && borrarRespuestas != null){
+		borrarRespuestas.addEventListener('click',function(){
+			location.reload();
+		});
+	}
 		//el bucle es para registrar un envento cuando pulsemos submit
 		//en cada formulario.
 	for(var i=0; i<formPreguntas.length;i++)

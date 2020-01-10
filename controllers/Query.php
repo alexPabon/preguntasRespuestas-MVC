@@ -25,6 +25,24 @@ class Query{
         	//cargar la vista del listado
         require_once 'view/pregunta/list.php';
     }
+
+     public function resPreguntas($id=false){
+        if(!Login::getUsuario())
+            throw new Exception('debes estar identificado');
+            //Comprobar que llega el codigo
+        if(!$id)
+            throw new Exception("No se indico el Modulo");
+        
+        $modulos = Modulo::getModulo($id);
+        $preguntas=Modulo::getModuloPreguntas($id);
+        
+        
+            //cagar los usuarios
+        $usuario=Login::getUsuario();
+         
+            //cargar la vista del listado
+        require_once 'view/pregunta/resPreguntas.php';         
+    }
     
     	//muestra un pregunta
     public function show($id=false){

@@ -9,7 +9,7 @@
 			//recorro el objeto $modulos para añadirlos en la variable $listaModulos
 		foreach($modulos as $mod){							
 			$listaModulos.="<p class='modulos'>";
-				$listaModulos.="<a class='enlaceModulo' href='' title='Resolver Cuestinario'>";
+				$listaModulos.="<a class='enlaceModulo' href='/query/resPreguntas/".$mod->id."' title='Resolver Cuestinario'>";
 					$listaModulos.="- ". $mod->codigo.": ".$mod->nombre." ".$mod->horas." Horas.  ";
 				$listaModulos.="</a>";
 				if(Login::isAdmin())

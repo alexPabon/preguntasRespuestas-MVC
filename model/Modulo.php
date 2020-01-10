@@ -25,6 +25,16 @@ class Modulo{
         return DB::select($consulta,'Modulo');        //ejecutar y retornar el resultado
     }
 
+    public static function getModuloPreguntas(int $id=0):array{
+        $consulta ="SELECT m.id AS idModulo, p.id,p.enunciado, r.idPregunta,r.texto,r.correcta
+                    FROM modulos m
+                        INNER JOIN preguntas_modulos pm ON m.id = pm.idModulo
+                        INNER JOIN preguntas p ON pm.idPregunta = p.id
+                        INNER JOIN respuestas r ON p.id = r.idPregunta
+                    WHERE m.id = $id";
+        return DB::selectAll($consulta,'Modulo');
+    }
+
       //recuperar los modulos correspondientes a una accion
     public static function getAccionModulos(int $id):array{
         $consulta="SELECT a.id AS idAccion, a.codigo AS codigoAcc, a.nombre AS nombreAcc,m.* 
