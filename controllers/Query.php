@@ -28,7 +28,7 @@ class Query{
 
      public function resPreguntas($id=false){
         if(!Login::getUsuario())
-            throw new Exception('debes estar identificado');
+            throw new Exception('Para poder ver las preguntas, debes de iniciar sesion');
             //Comprobar que llega el codigo
         if(!$id)
             throw new Exception("No se indico el Modulo");
