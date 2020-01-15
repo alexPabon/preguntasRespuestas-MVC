@@ -9,7 +9,7 @@
   foreach ($modulos as $modul){
     $idModulo = $modul->id;
     $listaPreguntas.="<div class='marcoModulos'>";
-      $listaPreguntas.= "<h2 class='modulos'>".$modul->codigo.": ".$modul->nombre."</h2>";
+      $listaPreguntas.= "<h3 class='modulos'>".$modul->codigo.": ".$modul->nombre."</h3>";
       $listaPreguntas.="<div class='contP'>";
         $listaPreguntas.="<form method='post' name='modul_".$idModulo."' class='formModulos' id='modul_".$idModulo."'>";    
           $listaPreguntas.= "<ol type='1' class='lisPreguntas'>";

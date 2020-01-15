@@ -82,7 +82,7 @@ class Module{
     public function store(){
     		//comprobar que llegue los datos por post
     	if(empty($_POST['nombre']))
-    		throw new Exception("Intentas Acceder sin formulario");    		
+    		throw new Exception("Hay campos que estan sin rellenar");    		
     		//solo los administradores pueden crear Modulos
         if(!Login::isAdmin())
             throw new Exception("Debes ser administrador");

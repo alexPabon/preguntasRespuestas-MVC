@@ -12,8 +12,7 @@ div.marcoModulos:hover{
 
 h2.modulos:hover{
 	cursor: pointer;
-	color: mediumblue;
-	text-decoration-line: underline;
+	color: mediumblue;	
 }
 
 .on{
