@@ -3,6 +3,10 @@
 class Welcome{
 
 	public static function index(){
+	    
+	    //guarda la direccion Ip del cliente
+	    AddressIp::guardarIp(); 
+	    
 		//recupera el usuario para pasarselo a la vista
 		$usuario=Login::getUsuario();
 

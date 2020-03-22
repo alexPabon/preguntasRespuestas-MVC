@@ -3,7 +3,7 @@
 
 //PARA EL AUTOLOAD
 //list de directorios donde buscar las clases
-$directorios=['controllers','model','libraries'];
+$directorios=['controllers','model','libraries','templates','traits'];
 
 //PARAMETROS DE CONFIGURACION BDD
 define('SGDB','mysql');		//conector que debe usar PDO

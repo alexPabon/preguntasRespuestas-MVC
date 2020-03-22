@@ -4,6 +4,8 @@
 
 //CONTROLADOR ACCIONES para la gestion de model/acciones
 class Action{
+
+
     
         //operacion por defecto
     public function index(){
@@ -12,11 +14,15 @@ class Action{
     
         //lista de acciones
     public function list(){
+
+        //guarda la direccion Ip del cliente
+        AddressIp::guardarIp();        
+
             //recupera la lista de acciones
         $acciones=Accion::get();
         
             //cagar los usuarios
-        $usuario=Login::getUsuario();
+        $usuario=Login::getUsuario();        
         
             //cargar la vista del listado
         include '../../preguntas/view/acciones/list.php';

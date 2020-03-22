@@ -36,7 +36,7 @@ class FrontController{
 			$usuario=Login::getUsuario();	//variable con info del usuario
 			include '../../preguntas/view/error.php'; 		//carga la vista de error
 
-			header("refresh:6, url=/");
+			header("refresh:10, url=/");
 		}
 	}
 }

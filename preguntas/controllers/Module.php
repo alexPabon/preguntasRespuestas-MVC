@@ -13,6 +13,9 @@ class Module{
     	//lista de modulos
     public function list(){
 
+         //guarda la direccion Ip del cliente
+        AddressIp::guardarIp(); 
+
     		//recupera la lista de acciones
         $acciones=Accion::get();
         	//recupera la lista de modulos
