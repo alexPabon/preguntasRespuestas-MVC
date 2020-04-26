@@ -6,7 +6,7 @@ trait AddressIp{
 		$direccionIP = $_SERVER['REMOTE_ADDR'];
         $nombreModulo = $_SERVER['REQUEST_URI'];
 
-        $saveIp = new VisitasIp();
+        $saveIp = new ConsultaIps();
         $saveIp->numeroIp = $direccionIP;
         $saveIp->clase = $nombreModulo;
 

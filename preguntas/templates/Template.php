@@ -77,6 +77,11 @@ class Template{
 						</ul>
 					</div>
 				<?php } ?>
+				<?php if(Login::isAdmin()){?>
+					<a href="/marksmap" class="boton">Ver en el Mapa</a> 
+					<a href="/marksmap/actualizar" class="boton">Actualizar Datos</a>
+            		<a href="/marksmap/list" class="boton">Ver El listado de Ips</a>
+				<?php }	?>
 			</div>
 		</nav>
 	<?php }
