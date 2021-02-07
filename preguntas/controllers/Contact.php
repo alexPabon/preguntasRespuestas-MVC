@@ -12,8 +12,8 @@ class Contact{
         $from = DB::escape($_POST['email']);
         $company= DB::escape($_POST['empresa']);
         $tel= $_POST['tel'];
-        $subject = DB::escape($_POST['asunto']);
-        $message = DB::escape($_POST['mensaje']);
+        $subject = DB::escape($_POST['motivo']);
+        $message = DB::escape($_POST['recado']);
         $privacidad = !isset($_POST['acepto'])?1:0;
         
         if($privacidad||empty($to)||empty($nombre)||empty($from)||empty($message))
