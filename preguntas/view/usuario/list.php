@@ -23,7 +23,7 @@
 					<fieldset id="marcoForm"><legend>Filtrar listado</legend>
 						<select for="busqueda" id="filtro" name="filtro">
 							<option value="">------</option>
-							<option id="filt" value="user" <?=($fColumna=='user')?'selected':'';?>>Usuario</option>						
+							<option id="filt" value="user" <?=($fColumna=='user')?'selected':'';?>>Usuario</option>
 							<option class="elec" value="email" <?=($fColumna=='email')?'selected':'';?>>Email</option>
 						</select>
 						<input id="busqueda" type="text" name="busqueda" maxlength="14" value="<?=(!empty($fBuscar))? $fBuscar:''?>">						

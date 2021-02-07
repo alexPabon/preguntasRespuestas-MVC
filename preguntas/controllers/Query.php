@@ -27,6 +27,10 @@ class Query{
     }
 
      public function resPreguntas($id=false){
+
+        //guarda la direccion Ip del cliente
+        AddressIp::guardarIp(); 
+        
         if(!Login::getUsuario())
             throw new Exception('Para poder ver las preguntas, debes de iniciar sesion');
             //Comprobar que llega el codigo

@@ -1,0 +1,96 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background: black;
+	color: lightgrey;
+	
+	margin:0;	
+}
+
+.titulo{
+	text-align: center;
+}
+
+.container{
+	padding: 10px 15px;
+	max-width: 1080px;
+	width: 100%;
+	margin: 0 auto;		
+}
+
+.lugares{
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-around;	
+	padding: 10px 5px;
+	width: 100%;
+}
+
+.ubicacion{	
+	padding: 10px;
+	border:solid 1px grey;
+	border-radius: 10px;
+	margin: 5px 0;
+	width: 50%;
+	min-width: 125px;
+	max-width: 160px;
+	background: #0e2323;
+	text-decoration: none;
+	color: lightgrey;
+}
+
+/* estilos de tabla */
+.table{	
+	border-radius: 5px;
+	width: 100%;
+	min-width: 100px;
+	padding: 0; 		
+}
+
+.tbHeader{
+	color:black;
+	padding: 10px;	
+	background: lightgrey;	
+}
+
+.table .rows:nth-child(odd){
+	background: #1f231c;	
+}
+
+.numero{
+	color:#087aef;
+}
+
+/* ************************** */
+
+/* .menu{
+	width: 100%;
+	background: #3b4a56;	
+	padding: 5px 0;
+	display:inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;	
+} */
+
+/* .boton{
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	background: #087aef;
+	color:white;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.boton:hover{	
+	background: rgba(8, 122, 239, 0.6);
+} */
+
+@media only screen and (max-width:425px){
+	.table{
+		font-size: 1.5vw;
+	}
+}
