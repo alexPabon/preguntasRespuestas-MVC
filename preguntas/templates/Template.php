@@ -33,7 +33,7 @@ class Template{
 				<h2><a href="/">Inicio</a></h2>
 				<span class="btnBurger"><hr><hr><hr></span>				
 			</div>
-			<div class="menu">				
+			<div id="contBotons" class="menu">				
 				<div class="botmenu">
 					<h4>Acc Formativas</h4>
 					<ul class="lis">

@@ -68,7 +68,7 @@
                     <th>Ultimo acceso</th>
                 </tr>                
                 <?=$ips?>
-            </table>
+            </table>            
         </div>
     </body>
 </html>

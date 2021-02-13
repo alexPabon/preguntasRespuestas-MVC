@@ -33,7 +33,7 @@ function inicio(){
         var city = queryData[i].city;
         var zip = queryData[i].zip;
 
-        coordinates.innerHTML += '<a href="#tit1" class="ubicacion" lat="'+lat+'" '+'lon='+lon+'>'+
+        coordinates.innerHTML += '<a href="#contBotons" class="ubicacion" lat="'+lat+'" '+'lon='+lon+'>'+
 	                                'city: '+city+'<br>'+
 	                                'Zip: '+zip+'<br>'+
 	                                'Lat: '+lat+'<br>'+
