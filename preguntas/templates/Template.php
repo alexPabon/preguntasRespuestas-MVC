@@ -110,11 +110,11 @@ class Template{
 					</li>
 					<li>
 						<label class="labEntradas" for="asunto">Asunto</label>
-						<input class="infoEntradas" id="asunto" type="text" name="asunto" placeholder="Asunto">						
+						<input class="infoEntradas" id="asunto" type="text" name="motivo" placeholder="Asunto">						
 					</li>
 					<li>
 						<label class="labEntradas" for="mensaje">Mensaje</label>
-						<textarea id="mensaje" class="infoEntradas" name="mensaje" maxlength="500" placeholder="Mensaje"></textarea>
+						<textarea id="mensaje" class="infoEntradas" name="recado" maxlength="500" placeholder="Mensaje"></textarea>
 					</li>
 					<li>
 						<input id="acepto" type="checkbox" name="acepto">
